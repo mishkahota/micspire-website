@@ -1,0 +1,506 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>MICSPIRE | Find Your Voice. Speak with Confidence.</title>\
+    <style>\
+        /* Global & Theme Variables */\
+        :root \{\
+            --primary-orange: #f47920;\
+            --light-gold: #ffebc2;\
+            --deep-plum: #582433;\
+            --text-dark: #333333;\
+            --bg-light: #fdfbf7;\
+        \}\
+\
+        * \{\
+            box-sizing: border-box;\
+            margin: 0;\
+            padding: 0;\
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\
+        \}\
+\
+        html \{\
+            scroll-behavior: smooth;\
+        \}\
+\
+        body \{\
+            background-color: var(--bg-light);\
+            color: var(--text-dark);\
+            line-height: 1.6;\
+        \}\
+\
+        /* Typography styling matching sleek serif display style */\
+        h1, h2, h3, .logo \{\
+            color: var(--deep-plum);\
+            font-family: 'Georgia', serif;\
+            font-weight: normal;\
+        \}\
+\
+        /* Navigation Banner */\
+        header \{\
+            background-color: white;\
+            padding: 1rem 2rem;\
+            display: flex;\
+            justify-content: space-between;\
+            align-items: center;\
+            position: sticky;\
+            top: 0;\
+            z-index: 100;\
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);\
+        \}\
+\
+        header .logo-container \{\
+            display: flex;\
+            align-items: center;\
+            gap: 10px;\
+        \}\
+\
+        header .logo-icon \{\
+            width: 30px;\
+            height: 30px;\
+            background-color: var(--primary-orange);\
+            border-radius: 6px;\
+            display: inline-block;\
+        \}\
+\
+        header .logo \{\
+            font-size: 1.5rem;\
+            letter-spacing: 2px;\
+        \}\
+\
+        nav a \{\
+            color: var(--text-dark);\
+            text-decoration: none;\
+            margin-left: 20px;\
+            font-weight: 500;\
+            transition: color 0.3s;\
+        \}\
+\
+        nav a:hover \{\
+            color: var(--primary-orange);\
+        \}\
+\
+        /* Hero Section */\
+        .hero \{\
+            background: radial-gradient(circle, var(--light-gold) 0%, #fff2dc 100%);\
+            min-height: 70vh;\
+            display: flex;\
+            flex-direction: column;\
+            justify-content: center;\
+            align-items: center;\
+            text-align: center;\
+            padding: 40px 20px;\
+            position: relative;\
+        \}\
+\
+        .hero h1 \{\
+            font-size: 4rem;\
+            letter-spacing: 4px;\
+            margin-bottom: 10px;\
+        \}\
+\
+        .hero p \{\
+            font-size: 1.4rem;\
+            color: var(--text-dark);\
+            margin-bottom: 30px;\
+            font-style: italic;\
+        \}\
+\
+        /* Buttons */\
+        .btn \{\
+            background-color: var(--deep-plum);\
+            color: white;\
+            padding: 12px 30px;\
+            text-decoration: none;\
+            border-radius: 4px;\
+            font-weight: bold;\
+            display: inline-block;\
+            transition: transform 0.2s, background-color 0.3s;\
+            border: none;\
+            cursor: pointer;\
+        \}\
+\
+        .btn:hover \{\
+            background-color: #421a25;\
+            transform: translateY(-2px);\
+        \}\
+\
+        /* Container & Layouts */\
+        .container \{\
+            max-width: 1100px;\
+            margin: auto;\
+            padding: 60px 20px;\
+        \}\
+\
+        .section-title \{\
+            text-align: center;\
+            font-size: 2.5rem;\
+            margin-bottom: 40px;\
+            position: relative;\
+        \}\
+\
+        /* Soft Glow Background Accents */\
+        .glow-bg \{\
+            position: relative;\
+        \}\
+        .glow-bg::before \{\
+            content: '';\
+            position: absolute;\
+            width: 300px;\
+            height: 300px;\
+            background: radial-gradient(circle, rgba(254,235,194,0.8) 0%, rgba(255,255,255,0) 70%);\
+            z-index: -1;\
+            top: 50%;\
+            left: 50%;\
+            transform: translate(-50%, -50%);\
+            border-radius: 50%;\
+        \}\
+\
+        /* Split layouts (About & Founder) */\
+        .split-layout \{\
+            display: flex;\
+            align-items: center;\
+            gap: 50px;\
+            margin-bottom: 60px;\
+        \}\
+\
+        .split-text \{\
+            flex: 1;\
+        \}\
+\
+        .split-text p \{\
+            margin-bottom: 20px;\
+            font-size: 1.1rem;\
+        \}\
+\
+        .split-image \{\
+            flex: 1;\
+            display: flex;\
+            justify-content: center;\
+        \}\
+\
+        .split-image img \{\
+            max-width: 100%;\
+            border-radius: 20px;\
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);\
+        \}\
+\
+        /* Mission Statement Banner */\
+        .mission-banner \{\
+            background-color: #fff8ed;\
+            padding: 60px 20px;\
+            text-align: center;\
+            border-top: 1px solid #f3e5cc;\
+            border-bottom: 1px solid #f3e5cc;\
+        \}\
+\
+        .mission-content \{\
+            max-width: 800px;\
+            margin: 0 auto;\
+        \}\
+\
+        .mission-content h2 \{\
+            font-size: 2.5rem;\
+            margin-bottom: 20px;\
+            letter-spacing: 2px;\
+        \}\
+\
+        /* What We Offer Grid */\
+        .services-grid \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\
+            gap: 30px;\
+            margin-bottom: 40px;\
+        \}\
+\
+        .service-card \{\
+            background: white;\
+            padding: 40px 30px;\
+            border-radius: 12px;\
+            text-align: center;\
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);\
+            transition: translateY 0.3s;\
+            border-top: 4px solid var(--primary-orange);\
+        \}\
+\
+        .service-card h3 \{\
+            font-size: 1.5rem;\
+            margin-bottom: 15px;\
+        \}\
+\
+        /* Journey Process Grid */\
+        .journey-grid \{\
+            display: grid;\
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));\
+            gap: 25px;\
+            margin-top: 40px;\
+        \}\
+\
+        .journey-step \{\
+            background: linear-gradient(135deg, #ffffff 0%, #fffbf4 100%);\
+            padding: 30px 20px;\
+            border-radius: 15px;\
+            text-align: center;\
+            border: 1px solid #f0e4cf;\
+        \}\
+\
+        .step-number \{\
+            font-family: 'Georgia', serif;\
+            color: var(--primary-orange);\
+            font-size: 1.5rem;\
+            margin-bottom: 10px;\
+            display: block;\
+        \}\
+\
+        .journey-step h3 \{\
+            font-size: 1.25rem;\
+            margin-bottom: 10px;\
+        \}\
+\
+        /* Contact Section */\
+        .contact-section \{\
+            background: radial-gradient(circle at right, var(--light-gold) 0%, #fffcf7 100%);\
+        \}\
+\
+        .contact-container \{\
+            display: flex;\
+            justify-content: space-between;\
+            gap: 50px;\
+        \}\
+\
+        .contact-info h2 \{\
+            font-size: 2.5rem;\
+            margin-bottom: 20px;\
+            letter-spacing: 1px;\
+        \}\
+\
+        .contact-details p \{\
+            font-size: 1.2rem;\
+            margin-bottom: 10px;\
+        \}\
+\
+        .contact-form-container \{\
+            flex: 1;\
+            background: white;\
+            padding: 40px;\
+            border-radius: 12px;\
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);\
+        \}\
+\
+        .form-group \{\
+            margin-bottom: 20px;\
+        \}\
+\
+        .form-group label \{\
+            display: block;\
+            margin-bottom: 8px;\
+            font-weight: 500;\
+        \}\
+\
+        .form-group input, .form-group textarea \{\
+            width: 100%;\
+            padding: 12px;\
+            border: 1px solid #dddddd;\
+            border-radius: 6px;\
+            font-size: 1rem;\
+        \}\
+\
+        /* Footer */\
+        footer \{\
+            background-color: var(--deep-plum);\
+            color: white;\
+            text-align: center;\
+            padding: 30px;\
+            font-size: 0.9rem;\
+        \}\
+\
+        /* Responsive Breakpoints */\
+        @media (max-width: 768px) \{\
+            .split-layout \{\
+                flex-direction: column;\
+                text-align: center;\
+            \}\
+            .split-layout.reverse \{\
+                flex-direction: column-reverse;\
+            \}\
+            .hero h1 \{\
+                font-size: 2.8rem;\
+            \}\
+            .contact-container \{\
+                flex-direction: column;\
+            \}\
+            header \{\
+                flex-direction: column;\
+                gap: 15px;\
+            \}\
+            nav a \{\
+                margin: 0 10px;\
+            \}\
+        \}\
+    </style>\
+</head>\
+<body>\
+\
+    <header>\
+        <div class="logo-container">\
+            <div class="logo-icon"></div>\
+            <div class="logo">MICSPIRE</div>\
+        </div>\
+        <nav>\
+            <a href="#about">About</a>\
+            <a href="#offers">What We Offer</a>\
+            <a href="#founder">The Founder</a>\
+            <a href="#journey">Our Journey</a>\
+            <a href="#contact">Contact</a>\
+        </nav>\
+    </header>\
+\
+    <section class="hero">\
+        <h1>MICSPIRE</h1>\
+        <p>Find Your Voice. Speak with Confidence.</p>\
+        <a href="#journey" class="btn">Join MICSPIRE Today</a>\
+    </section>\
+\
+    <main>\
+        \
+        <section id="about" class="container split-layout glow-bg">\
+            <div class="split-text">\
+                <h2 style="font-size: 2.5rem; margin-bottom: 20px;">About MICSPIRE</h2>\
+                <p>Micspire is a public speaking program designed to help middle school students build confidence, communication skills, and the ability to express their ideas clearly. It focuses on teaching practical speaking skills through interactive lessons, including storytelling, persuasive speaking, and impromptu practice.</p>\
+                <p>The program is designed to be engaging, supportive, and accessible, especially for students who may feel nervous about speaking in front of others.</p>\
+                <p>Micspire is for middle school students who want to become more confident speakers, whether they are just starting to overcome stage fright or already looking to refine their communication skills. It is especially helpful for students who want to improve class presentations, participate more actively in school, or develop leadership and expression skills early on.</p>\
+            </div>\
+            <div class="split-image">\
+                <img src="https://picsum.photos/450/300" alt="Microphone on stage">\
+            </div>\
+        </section>\
+\
+        <section class="mission-banner">\
+            <div class="mission-content">\
+                <h2>MISSION STATEMENT</h2>\
+                <p style="font-size: 1.2rem; color: #555; line-height: 1.8;">\
+                    Micspire\'92s mission is to help students find their voice and speak with confidence. Through writing, storytelling, and creative expression, students learn to turn their ideas into clear, powerful communication. Micspire builds the confidence to speak with purpose\'97anywhere, anytime.\
+                </p>\
+            </div>\
+        </section>\
+\
+        <section id="offers" class="container">\
+            <h2 class="section-title">What We Offer</h2>\
+            <div class="services-grid">\
+                <div class="service-card">\
+                    <h3>Persuasive Writing</h3>\
+                    <p>Students begin their Micspire journey by learning how to structure clear and compelling arguments through persuasive writing. They focus on organizing ideas, using strong reasoning, and building confidence in expressing their opinions effectively.</p>\
+                </div>\
+                <div class="service-card">\
+                    <h3>Poetry Expression</h3>\
+                    <p>Students explore creative expression through poetry, focusing on rhythm, emotion, and voice. They learn how to use language intentionally to express thoughts and feelings in a powerful and artistic way.</p>\
+                </div>\
+                <div class="service-card">\
+                    <h3>Narrative Storytelling</h3>\
+                    <p>Students learn how to craft engaging stories with strong structure, vivid detail, and emotional impact. This session helps them bring personal or fictional experiences to life in a way that captures and holds an audience's attention.</p>\
+                </div>\
+            </div>\
+            <div style="text-align: center;">\
+                <a href="#journey" class="btn">Join MICSPIRE Today</a>\
+            </div>\
+        </section>\
+\
+        <section id="founder" class="container split-layout reverse glow-bg">\
+            <div class="split-image">\
+                <img src="https://picsum.photos/400/400" alt="Mishka Hota - Founder" style="border-radius: 50%; max-width: 300px; height: 300px; object-fit: cover;">\
+            </div>\
+            <div class="split-text">\
+                <h2 style="font-size: 2.5rem; margin-bottom: 10px;">About the Founder</h2>\
+                <h3 style="font-size: 1.5rem; color: var(--primary-orange); margin-bottom: 20px;">Mishka Hota</h3>\
+                <p>Micspire started from a simple observation: most students are expected to speak confidently in front of others, but very few are actually taught how. I wanted to create a space where middle school students could learn those skills early\'97without pressure, judgment, or fear of being "wrong." What began as an idea quickly became a program focused on helping students find their voice through structured, supportive speaking practice.</p>\
+                <p>As the founder, my goal is to make communication feel accessible and natural, not intimidating. I believe confidence in speaking is not something you\'92re born with\'97it\'92s something you build through practice, feedback, and the right environment. Micspire exists to give students that environment, and to help them grow into speakers who can express their ideas clearly, creatively, and with purpose.</p>\
+            </div>\
+        </section>\
+\
+        <section id="journey" class="container" style="border-top: 1px solid #eee;">\
+            <h2 class="section-title">Start Your MICSPIRE Journey Today</h2>\
+            <div class="journey-grid">\
+                <div class="journey-step">\
+                    <span class="step-number">I.</span>\
+                    <h3>Fill out the Form</h3>\
+                    <p style="margin-bottom: 15px; font-size: 0.9rem;">Provide your detail submission using our form below.</p>\
+                    <a href="#contact" class="btn" style="padding: 6px 15px; font-size: 0.85rem;">Click Here</a>\
+                </div>\
+                <div class="journey-step">\
+                    <span class="step-number">II.</span>\
+                    <h3>Choose Your Session</h3>\
+                    <p style="font-size: 0.9rem;">Select the Micspire program that fits your goals. If it's your first time, please select the PERSUASION session.</p>\
+                </div>\
+                <div class="journey-step">\
+                    <span class="step-number">III.</span>\
+                    <h3>Get Confirmation</h3>\
+                    <p style="font-size: 0.9rem;">We'll email you with all the details and next coordination steps.</p>\
+                </div>\
+                <div class="journey-step">\
+                    <span class="step-number">IV.</span>\
+                    <h3>Start Speaking</h3>\
+                    <p style="font-size: 0.9rem;">Join your first session! New Sessions start Sunday, June 21st.</p>\
+                </div>\
+            </div>\
+        </section>\
+\
+        <section id="contact" class="contact-section">\
+            <div class="container contact-container">\
+                <div class="contact-info" style="flex: 1;">\
+                    <h2>HAVE QUESTIONS?<br>REACH OUT</h2>\
+                    <div class="contact-details" style="margin-top: 30px;">\
+                        <p><strong>Founder:</strong> Mishka Hota</p>\
+                        <p><strong>Location:</strong> Naperville, Illinois</p>\
+                        <p><strong>Phone:</strong> 331-203-3565</p>\
+                        <p><strong>Email:</strong> mishkahota@gmail.com</p>\
+                        <p style="margin-top: 20px; font-size: 1rem; color: #555;">If you have any questions or want to learn more about Micspire, feel free to reach out. I would love to connect and meet with you to share more about the program.</p>\
+                    </div>\
+                </div>\
+                \
+                <div class="contact-form-container">\
+                    <h3 style="margin-bottom: 20px;">Registration &amp; Inquiry Form</h3>\
+                    <form action="mailto:mishkahota@gmail.com" method="post" enctype="text/plain">\
+                        <div class="form-group">\
+                            <label>Student / Parent Name</label>\
+                            <input type="text" name="name" placeholder="Your Name" required>\
+                        </div>\
+                        <div class="form-group">\
+                            <label>Email Address</label>\
+                            <input type="email" name="email" placeholder="Your Email" required>\
+                        </div>\
+                        <div class="form-group">\
+                            <label>Select Session Track</label>\
+                            <select name="session" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px;">\
+                                <option value="persuasion">Persuasive Writing (Recommended for First-timers)</option>\
+                                <option value="poetry">Poetry Expression</option>\
+                                <option value="storytelling">Narrative Storytelling</option>\
+                                <option value="general">General Question / Inquiry</option>\
+                            </select>\
+                        </div>\
+                        <div class="form-group">\
+                            <label>Message / Notes</label>\
+                            <textarea name="message" rows="4" placeholder="Tell us about your speech or communication goals..." required></textarea>\
+                        </div>\
+                        <button type="submit" class="btn" style="width: 100%;">Submit Journey Request</button>\
+                    </form>\
+                </div>\
+            </div>\
+        </section>\
+\
+    </main>\
+\
+    <footer>\
+        <p>&copy; 2026 MICSPIRE. All rights reserved. | Empowering middle school voices in Naperville, IL.</p>\
+    </footer>\
+\
+</body>\
+</html>}
